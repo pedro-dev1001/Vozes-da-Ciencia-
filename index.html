@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta
+    name="description"
+    content="Vozes da Ciência: histórias de mulheres que contribuíram para a ciência, tecnologia, saúde e inovação."
+>
+
+<title>Vozes da Ciência | Mulheres na Ciência e Inovação</title>
+
+<link rel="icon" type="image/png" href="21752.png">
+
+<!-- Fonte -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+<style>
+    /* =========================================================
+       VARIÁVEIS
+    ========================================================= */
+
+    :root {
+        --bg-body: #0d0a12;
+        --bg-surface: rgba(255, 255, 255, 0.03);
+        --bg-surface-hover: rgba(255, 255, 255, 0.07);
+
+        --border-light: rgba(244, 194, 194, 0.15);
+        --border-hover: rgba(216, 195, 229, 0.5);
+
+        --pink: #f4c2c2;
+        --purple-light: #d8c3e5;
+        --purple-dark: #211528;
+
+        --text-primary: #ffffff;
+        --text-secondary: #b8afc2;
+        --text-muted: #80738e;
+
+        --gradient-accent:
+            linear-gradient(
+                135deg,
+                #f4c2c2 0%,
+                #d8c3e5 50%,
+                #a892ee 100%
+            );
+
+        --radius-lg: 24px;
+        --radius-md: 16px;
+        --radius-pill: 999px;
+
+        --content-width: 1200px;
+    }
+
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        min-height: 100vh;
+        overflow-x: hidden;
+
+        background-color: var(--bg-body);
+        color: var(--text-primary);
+
+        font-family:
+            "Plus Jakarta Sans",
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            sans-serif;
+
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+    }
+
+    button {
+        font: inherit;
+    }
+
+    strong {
+        color: #ffffff;
+        font-weight: 700;
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+        position: relative;
+
+        padding: 8rem 2rem 6rem;
+
+        text-align: center;
+
+        background:
+            radial-gradient(
+                circle at 50% 20%,
+                rgba(216, 195, 229, 0.15) 0%,
+                rgba(13, 10, 18, 0) 70%
+            );
+
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .hero-badge {
+        display: inline-block;
+
+        margin-bottom: 1.5rem;
+        padding: 0.4rem 1.2rem;
+
+        border: 1px solid rgba(244, 194, 194, 0.25);
+        border-radius: var(--radius-pill);
+
+        background: rgba(244, 194, 194, 0.1);
+        color: var(--pink);
+
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        backdrop-filter: blur(10px);
+    }
+
+    .hero h1 {
+        max-width: 900px;
+
+        margin: 0 auto 1.5rem;
+
+        background: var(--gradient-accent);
+        background-clip: text;
+        -webkit-background-clip: text;
+
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+
+        font-size: clamp(2.4rem, 6vw, 3.5rem);
+        font-weight: 800;
+
+        letter-spacing: -1.5px;
+        line-height: 1.15;
+    }
+
+    .hero-description {
+        max-width: 680px;
+
+        margin: 0 auto;
+
+        color: var(--text-secondary);
+
+        font-size: 1.2rem;
+        line-height: 1.7;
+    }
+
+    /* =========================================================
+       MÉTRICAS
+    ========================================================= */
+
+    .metrics {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+
+        position: relative;
+        z-index: 2;
+
+        max-width: 1000px;
+
+        margin: -2.5rem auto 4rem;
+        padding: 2rem;
+
+        border: 1px solid var(--border-light);
+        border-radius: 20px;
+
+        background: rgba(33, 21, 40, 0.6);
+
+        box-shadow:
+            0 20px 50px rgba(0, 0, 0, 0.5);
+
+        backdrop-filter: blur(20px);
+    }
+
+    .metric {
+        text-align: center;
+    }
+
+    .metric-number {
+        display: block;
+
+        background: var(--gradient-accent);
+        background-clip: text;
+        -webkit-background-clip: text;
+
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+
+        font-size: 2.2rem;
+        font-weight: 800;
+    }
+
+    .metric-label {
+        display: block;
+
+        margin-top: 0.2rem;
+
+        color: var(--text-muted);
+
+        font-size: 0.8rem;
+        font-weight: 600;
+
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    /* =========================================================
+       CONTEÚDO PRINCIPAL
+    ========================================================= */
+
+    main {
+        width: min(100% - 4rem, var(--content-width));
+
+        margin: 0 auto;
+
+        padding-bottom: 5rem;
+    }
+
+    .section {
+        margin-bottom: 3.5rem;
+        padding: 3.5rem;
+
+        border: 1px solid var(--border-light);
+        border-radius: var(--radius-lg);
+
+        background: var(--bg-surface);
+
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.3);
+
+        backdrop-filter: blur(12px);
+
+        transition:
+            border-color 0.3s ease,
+            background-color 0.3s ease;
+    }
+
+    .section:hover {
+        border-color: rgba(216, 195, 229, 0.3);
+    }
+
+    .section-title {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        margin-bottom: 1.2rem;
+
+        color: var(--text-primary);
+
+        font-size: 2.1rem;
+        font-weight: 700;
+
+        letter-spacing: -0.5px;
+        line-height: 1.25;
+    }
+
+    .section-title::before {
+        flex: 0 0 4px;
+
+        width: 4px;
+        height: 28px;
+
+        content: "";
+
+        border-radius: 4px;
+
+        background: var(--gradient-accent);
+    }
+
+    .section-intro,
+    .section-text {
+        color: var(--text-secondary);
+
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+    .section-intro {
+        margin-bottom: 1.5rem;
+    }
+
+    /* =========================================================
+       FILTROS
+    ========================================================= */
+
+    .filter-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+
+        margin-top: 1.5rem;
+    }
+
+    .filter-btn {
+        padding: 0.55rem 1.2rem;
+
+        border: 1px solid var(--border-light);
+        border-radius: var(--radius-pill);
+
+        background: rgba(255, 255, 255, 0.05);
+
+        color: var(--text-secondary);
+
+        cursor: pointer;
+
+        font-size: 0.9rem;
+
+        transition:
+            background-color 0.2s ease,
+            color 0.2s ease,
+            border-color 0.2s ease,
+            transform 0.2s ease;
+    }
+
+    .filter-btn:hover {
+        border-color: var(--pink);
+        color: var(--pink);
+    }
+
+    .filter-btn:focus-visible {
+        outline: 2px solid var(--pink);
+        outline-offset: 3px;
+    }
+
+    .filter-btn.active {
+        border-color: var(--pink);
+
+        background: var(--pink);
+
+        color: var(--purple-dark);
+
+        font-weight: 700;
+    }
+
+    .filter-btn:active {
+        transform: scale(0.97);
+    }
+
+    /* =========================================================
+       GRID DE CIENTISTAS
+    ========================================================= */
+
+    .scientists-grid {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 2rem;
+
+        margin-top: 2rem;
+
+        align-items: stretch;
+    }
+
+    .scientist-card {
+        display: flex;
+        flex-direction: column;
+
+        position: relative;
+
+        height: 100%;
+
+        overflow: hidden;
+
+        padding: 2rem;
+
+        border: 1px solid var(--border-light);
+        border-radius: var(--radius-lg);
+
+        background: rgba(255, 255, 255, 0.02);
+
+        backdrop-filter: blur(10px);
+
+        transition:
+            transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+            background-color 0.4s ease,
+            border-color 0.4s ease,
+            box-shadow 0.4s ease,
+            opacity 0.3s ease;
+    }
+
+    .scientist-card[hidden] {
+        display: none;
+    }
+
+    .scientist-card:hover {
+        transform: translateY(-8px);
+
+        border-color: var(--border-hover);
+
+        background: var(--bg-surface-hover);
+
+        box-shadow:
+            0 20px 40px rgba(0, 0, 0, 0.6),
+            0 0 30px rgba(216, 195, 229, 0.15);
+    }
+
+    /* =========================================================
+       IMAGENS
+    ========================================================= */
+
+    .card-image-wrapper {
+        width: 100%;
+        height: 420px;
+
+        margin-bottom: 1.5rem;
+
+        overflow: hidden;
+
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: var(--radius-md);
+
+        background: #1a1325;
+    }
+
+    .scientist-card img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center 20%;
+
+        filter:
+            grayscale(20%)
+            contrast(108%);
+
+        transition:
+            transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+            filter 0.6s ease;
+    }
+
+    .scientist-card:hover img {
+        transform: scale(1.05);
+
+        filter:
+            grayscale(0%)
+            contrast(105%);
+    }
+
+    /* =========================================================
+       INFORMAÇÕES DOS CARDS
+    ========================================================= */
+
+    .scientist-card h3 {
+        margin-bottom: 0.6rem;
+
+        color: var(--text-primary);
+
+        font-size: 1.6rem;
+        font-weight: 700;
+
+        letter-spacing: -0.5px;
+    }
+
+    .area {
+        align-self: flex-start;
+
+        margin-bottom: 1.2rem;
+        padding: 0.4rem 1rem;
+
+        border: 1px solid rgba(244, 194, 194, 0.25);
+        border-radius: var(--radius-pill);
+
+        background: rgba(244, 194, 194, 0.1);
+
+        color: var(--pink);
+
+        font-size: 0.75rem;
+        font-weight: 700;
+
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+    }
+
+    .scientist-card p {
+        flex: 1;
+
+        color: var(--text-secondary);
+
+        font-size: 0.98rem;
+        line-height: 1.7;
+    }
+
+    /* =========================================================
+       PROJETOS
+    ========================================================= */
+
+    .project-list {
+        display: grid;
+        gap: 1.5rem;
+    }
+
+    .project-item {
+        padding: 2rem;
+
+        border: 1px solid var(--border-light);
+        border-radius: var(--radius-md);
+
+        background: rgba(255, 255, 255, 0.02);
+
+        transition:
+            transform 0.3s ease,
+            border-color 0.3s ease,
+            background-color 0.3s ease;
+    }
+
+    .project-item:hover {
+        transform: translateX(6px);
+
+        border-color: var(--purple-light);
+
+        background: rgba(255, 255, 255, 0.04);
+    }
+
+    .project-header {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 1rem;
+
+        flex-wrap: wrap;
+
+        margin-bottom: 1rem;
+    }
+
+    .project-item h3 {
+        color: var(--text-primary);
+
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+
+    .project-tag {
+        padding: 0.3rem 0.8rem;
+
+        border: 1px solid var(--border-light);
+        border-radius: 8px;
+
+        background: var(--gradient-accent);
+
+        background-clip: text;
+        -webkit-background-clip: text;
+
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+
+        font-size: 0.85rem;
+        font-weight: 700;
+    }
+
+    .project-item p {
+        color: var(--text-secondary);
+
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    /* =========================================================
+       LISTA
+    ========================================================= */
+
+    .custom-list {
+        display: grid;
+        gap: 1.2rem;
+
+        margin-top: 1.5rem;
+        padding: 0;
+
+        list-style: none;
+    }
+
+    .custom-list li {
+        position: relative;
+
+        padding-left: 2rem;
+
+        color: var(--text-secondary);
+
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+    .custom-list li::before {
+        position: absolute;
+
+        top: 0.7rem;
+        left: 0;
+
+        width: 8px;
+        height: 8px;
+
+        content: "";
+
+        border-radius: 50%;
+
+        background: var(--pink);
+
+        box-shadow:
+            0 0 10px var(--pink);
+    }
+
+    /* =========================================================
+       CURIOSIDADES
+    ========================================================= */
+
+    .trivia-list {
+        display: grid;
+        gap: 1.5rem;
+    }
+
+    .trivia-item h3 {
+        margin-bottom: 0.3rem;
+
+        color: var(--pink);
+
+        font-size: 1.1rem;
+    }
+
+    .trivia-item p {
+        color: var(--text-secondary);
+
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    /* =========================================================
+       RODAPÉ
+    ========================================================= */
+
+    footer {
+        padding: 3rem 2rem;
+
+        border-top: 1px solid var(--border-light);
+
+        background: rgba(13, 10, 18, 0.95);
+
+        color: var(--text-muted);
+
+        text-align: center;
+
+        font-size: 0.9rem;
+    }
+
+    footer strong {
+        color: var(--pink);
+    }
+
+    /* =========================================================
+       RESPONSIVIDADE
+    ========================================================= */
+
+    @media (max-width: 900px) {
+        .scientists-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        .hero {
+            padding: 6rem 1.5rem 5rem;
+        }
+
+        .hero-description {
+            font-size: 1rem;
+        }
+
+        .metrics {
+            grid-template-columns: 1fr;
+
+            width: min(100% - 2rem, 500px);
+
+            margin-top: -1.5rem;
+        }
+
+        main {
+            width: min(100% - 2rem, var(--content-width));
+        }
+
+        .section {
+            padding: 2rem;
+
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.7rem;
+        }
+
+        .card-image-wrapper {
+            height: 320px;
+        }
+
+        .project-item:hover {
+            transform: none;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        .hero {
+            padding: 4.5rem 1rem 4rem;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+        }
+
+        .metrics {
+            padding: 1.5rem;
+        }
+
+        .section {
+            padding: 1.5rem;
+        }
+
+        .section-title {
+            align-items: flex-start;
+
+            font-size: 1.5rem;
+        }
+
+        .section-title::before {
+            margin-top: 0.2rem;
+        }
+
+        .scientist-card {
+            padding: 1.3rem;
+        }
+
+        .card-image-wrapper {
+            height: 300px;
+        }
+
+        .project-item {
+            padding: 1.5rem;
+        }
+    }
+
+    /* =========================================================
+       ACESSIBILIDADE / REDUÇÃO DE MOVIMENTO
+    ========================================================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+        html {
+            scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+            transition-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<!-- =========================================================
+     CABEÇALHO
+========================================================= -->
+
+<header class="hero">
+
+    <span class="hero-badge">
+        Iniciativa Global STEM
+    </span>
+
+    <h1>
+        Vozes da Ciência: A Trajetória Feminina na Inovação
+    </h1>
+
+    <p class="hero-description">
+        Resgatando histórias, celebrando conquistas e projetando um futuro
+        de liderança e equidade tecnológica.
+    </p>
+
+</header>
+
+
+<!-- =========================================================
+     MÉTRICAS
+========================================================= -->
+
+<section
+    class="metrics"
+    aria-label="Indicadores sobre mulheres na ciência"
+>
+
+    <div class="metric">
+
+        <span class="metric-number">
+            &lt; 30%
+        </span>
+
+        <span class="metric-label">
+            Pesquisadoras no mundo
+        </span>
+
+    </div>
+
+
+    <div class="metric">
+
+        <span class="metric-number">
+            100%
+        </span>
+
+        <span class="metric-label">
+            Impacto na história
+        </span>
+
+    </div>
+
+
+    <div class="metric">
+
+        <span class="metric-number">
+            4
+        </span>
+
+        <span class="metric-label">
+            Pioneiras em destaque
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTEÚDO
+========================================================= -->
+
+<main>
+
+    <!-- =====================================================
+         EFEITO MATILDA
+    ====================================================== -->
+
+    <section
+        class="section"
+        aria-labelledby="efeito-matilda"
+    >
+
+        <h2
+            class="section-title"
+            id="efeito-matilda"
+        >
+            O Efeito Matilda e o Apagamento Histórico
+        </h2>
+
+        <p class="section-text">
+
+            O termo
+            <strong>"Efeito Matilda"</strong>,
+            formalizado pela historiadora Margaret Rossiter,
+            descreve o fenômeno no qual contribuições e descobertas
+            científicas realizadas por mulheres são omitidas,
+            desvalorizadas ou atribuídas a colegas homens.
+
+            Esse fenômeno contribuiu para uma narrativa histórica
+            com menor visibilidade das mulheres nas áreas de ciência,
+            tecnologia, engenharia e matemática.
+
+        </p>
+
+    </section>
+
+
+    <!-- =====================================================
+         PIONEIRAS
+    ====================================================== -->
+
+    <section
+        class="section"
+        aria-labelledby="pioneiras"
+    >
+
+        <h2
+            class="section-title"
+            id="pioneiras"
+        >
+            Pioneiras e Visionárias
+        </h2>
+
+        <p class="section-intro">
+
+            Líderes intelectuais que contribuíram para o desenvolvimento
+            da ciência e da tecnologia moderna:
+
+        </p>
+
+
+        <!-- FILTROS -->
+
+        <div
+            class="filter-container"
+            role="group"
+            aria-label="Filtrar pesquisadoras"
+        >
+
+            <button
+                type="button"
+                class="filter-btn active"
+                data-filter="all"
+                aria-pressed="true"
+            >
+                Todas
+            </button>
+
+
+            <button
+                type="button"
+                class="filter-btn"
+                data-filter="tech"
+                aria-pressed="false"
+            >
+                Tecnologia &amp; IA
+            </button>
+
+
+            <button
+                type="button"
+                class="filter-btn"
+                data-filter="health"
+                aria-pressed="false"
+            >
+                Saúde &amp; Biologia
+            </button>
+
+        </div>
+
+
+        <!-- CARDS -->
+
+        <div class="scientists-grid">
+
+
+            <!-- MARGARET HAMILTON -->
+
+            <article
+                class="scientist-card"
+                data-category="tech"
+            >
+
+                <div class="card-image-wrapper">
+
+                    <img
+                        src="images.jpeg"
+                        alt="Margaret Hamilton"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <h3>
+                    Margaret Hamilton
+                </h3>
+
+
+                <span class="area">
+                    Engenharia de Software
+                </span>
+
+
+                <p>
+
+                    Como diretora da Divisão de Engenharia de Software
+                    do Laboratório de Instrumentação do MIT, liderou
+                    a equipe responsável pelo software de bordo das
+                    missões Apollo.
+
+                    Seu trabalho contribuiu para o desenvolvimento
+                    de práticas fundamentais da engenharia de software.
+
+                </p>
+
+            </article>
+
+
+            <!-- FEI-FEI LI -->
+
+            <article
+                class="scientist-card"
+                data-category="tech"
+            >
+
+                <div class="card-image-wrapper">
+
+                    <img
+                        src="images (1).jpeg"
+                        alt="Fei-Fei Li"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <h3>
+                    Fei-Fei Li
+                </h3>
+
+
+                <span class="area">
+                    Inteligência Artificial
+                </span>
+
+
+                <p>
+
+                    Professora de Stanford e pesquisadora na área de
+                    inteligência artificial e visão computacional.
+
+                    Foi uma das principais responsáveis pela criação
+                    do ImageNet, uma grande base de dados que teve
+                    papel importante no desenvolvimento da visão
+                    computacional moderna.
+
+                </p>
+
+            </article>
+
+
+            <!-- GERTRUDE ELION -->
+
+            <article
+                class="scientist-card"
+                data-category="health"
+            >
+
+                <div class="card-image-wrapper">
+
+                    <img
+                        src="Gertrude_Elion.jpg"
+                        alt="Gertrude Elion"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <h3>
+                    Gertrude Elion
+                </h3>
+
+
+                <span class="area">
+                    Farmacologia &amp; Bioquímica
+                </span>
+
+
+                <p>
+
+                    Laureada com o Prêmio Nobel de Fisiologia ou Medicina
+                    em 1988.
+
+                    Seu trabalho contribuiu para o desenvolvimento de
+                    medicamentos importantes, utilizando uma abordagem
+                    baseada na compreensão de processos bioquímicos.
+
+                </p>
+
+            </article>
+
+
+            <!-- TATIANA SAMPAIO -->
+
+            <article
+                class="scientist-card"
+                data-category="health"
+            >
+
+                <div class="card-image-wrapper">
+
+                    <img
+                        src="24-11-25-tatiana-sampaio-marie-c.avif"
+                        alt="Tatiana Sampaio"
+                        loading="lazy"
+                    >
+
+                </div>
+
+
+                <h3>
+                    Tatiana Sampaio
+                </h3>
+
+
+                <span class="area">
+                    Medicina Regenerativa
+                </span>
+
+
+                <p>
+
+                    Professora e pesquisadora brasileira associada
+                    à Universidade Federal do Rio de Janeiro.
+
+                    Sua pesquisa envolve o uso da polilaminina
+                    em estudos relacionados à regeneração do sistema
+                    nervoso após lesões medulares.
+
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROJETOS
+    ====================================================== -->
+
+    <section
+        class="section"
+        aria-labelledby="projetos"
+    >
+
+        <h2
+            class="section-title"
+            id="projetos"
+        >
+            Projetos e Inovações
+        </h2>
+
+
+        <p class="section-intro">
+
+            Alguns dos trabalhos e projetos associados às
+            pesquisadoras apresentadas:
+
+        </p>
+
+
+        <div class="project-list">
+
+
+            <!-- APOLLO -->
+
+            <article class="project-item">
+
+                <div class="project-header">
+
+                    <h3>
+                        Sistema de Navegação e Voo da Apollo 11
+                    </h3>
+
+                    <span class="project-tag">
+                        Margaret Hamilton
+                    </span>
+
+                </div>
+
+
+                <p>
+
+                    O software desenvolvido pela equipe de Hamilton
+                    utilizava prioridades para lidar com tarefas
+                    concorrentes.
+
+                    Durante o pouso da Apollo 11, essa arquitetura
+                    permitiu que tarefas essenciais continuassem
+                    sendo executadas enquanto o computador processava
+                    outras informações.
+
+                </p>
+
+            </article>
+
+
+            <!-- IMAGENET -->
+
+            <article class="project-item">
+
+                <div class="project-header">
+
+                    <h3>
+                        Base de Dados ImageNet
+                    </h3>
+
+                    <span class="project-tag">
+                        Fei-Fei Li
+                    </span>
+
+                </div>
+
+
+                <p>
+
+                    Iniciado em 2009, o ImageNet organizou milhões
+                    de imagens em uma grande estrutura de dados
+                    utilizada em pesquisas de visão computacional.
+
+                    A base teve papel importante na evolução de
+                    métodos modernos de aprendizado de máquina.
+
+                </p>
+
+            </article>
+
+
+            <!-- GERTRUDE -->
+
+            <article class="project-item">
+
+                <div class="project-header">
+
+                    <h3>
+                        Desenvolvimento Racional de Fármacos
+                    </h3>
+
+                    <span class="project-tag">
+                        Gertrude Elion
+                    </span>
+
+                </div>
+
+
+                <p>
+
+                    Gertrude Elion e sua equipe desenvolveram
+                    medicamentos utilizando uma abordagem baseada
+                    na identificação de processos bioquímicos
+                    específicos.
+
+                    Entre os medicamentos associados ao seu trabalho
+                    estão a azatioprina e o aciclovir.
+
+                </p>
+
+            </article>
+
+
+            <!-- POLILAMININA -->
+
+            <article class="project-item">
+
+                <div class="project-header">
+
+                    <h3>
+                        Pesquisa com Polilaminina
+                    </h3>
+
+                    <span class="project-tag">
+                        Tatiana Sampaio
+                    </span>
+
+                </div>
+
+
+                <p>
+
+                    As pesquisas de Tatiana Sampaio investigam
+                    o potencial da polilaminina em processos de
+                    regeneração do sistema nervoso, incluindo estudos
+                    relacionados a lesões medulares.
+
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PANORAMA STEM
+    ====================================================== -->
+
+    <section
+        class="section"
+        aria-labelledby="panorama"
+    >
+
+        <h2
+            class="section-title"
+            id="panorama"
+        >
+            Panorama Atual das Áreas STEM
+        </h2>
+
+
+        <p class="section-intro">
+
+            Alguns dos desafios relacionados à participação feminina
+            no ecossistema científico e tecnológico:
+
+        </p>
+
+
+        <ul class="custom-list">
+
+            <li>
+
+                <strong>
+                    Sub-representação acadêmica:
+                </strong>
+
+                a participação feminina na pesquisa científica
+                ainda é menor do que a masculina em escala global.
+
+            </li>
+
+
+            <li>
+
+                <strong>
+                    Acesso a cargos de liderança:
+                </strong>
+
+                mulheres continuam enfrentando barreiras para alcançar
+                determinadas posições de decisão e liderança científica.
+
+            </li>
+
+
+            <li>
+
+                <strong>
+                    Incentivo educacional:
+                </strong>
+
+                programas de educação, mentoria e formação podem
+                contribuir para ampliar a participação de meninas
+                e mulheres nas áreas STEM.
+
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- =====================================================
+         CURIOSIDADES
+    ====================================================== -->
+
+    <section
+        class="section"
+        aria-labelledby="curiosidades"
+    >
+
+        <h2
+            class="section-title"
+            id="curiosidades"
+        >
+            Curiosidades
+        </h2>
+
+
+        <div class="trivia-list">
+
+
+            <article class="trivia-item">
+
+                <h3>
+                    Margaret Hamilton
+                </h3>
+
+                <p>
+
+                    Sua filha Lauren costumava acompanhá-la no laboratório.
+                    Em uma simulação, Lauren acionou acidentalmente uma
+                    sequência que simulava uma situação de voo real.
+
+                    A experiência ajudou Hamilton a identificar a necessidade
+                    de proteger o sistema contra esse tipo de erro.
+
+                </p>
+
+            </article>
+
+
+            <article class="trivia-item">
+
+                <h3>
+                    Fei-Fei Li
+                </h3>
+
+                <p>
+
+                    Fei-Fei Li participou de iniciativas internacionais
+                    relacionadas à inteligência artificial e à discussão
+                    sobre o desenvolvimento de tecnologias centradas
+                    nas pessoas.
+
+                </p>
+
+            </article>
+
+
+            <article class="trivia-item">
+
+                <h3>
+                    Gertrude Elion
+                </h3>
+
+                <p>
+
+                    A experiência de perder pessoas próximas para o câncer
+                    influenciou sua decisão de seguir uma carreira dedicada
+                    à pesquisa biomédica e ao desenvolvimento de tratamentos.
+
+                </p>
+
+            </article>
+
+
+            <article class="trivia-item">
+
+                <h3>
+                    Tatiana Sampaio
+                </h3>
+
+                <p>
+
+                    Parte de sua pesquisa com polilaminina está relacionada
+                    ao estudo de mecanismos capazes de estimular processos
+                    de regeneração e crescimento neuronal.
+
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONSIDERAÇÕES FINAIS
+    ====================================================== -->
+
+    <section
+        class="section"
+        aria-labelledby="consideracoes"
+    >
+
+        <h2
+            class="section-title"
+            id="consideracoes"
+        >
+            Considerações Finais
+        </h2>
+
+
+        <p class="section-text">
+
+            A participação de mulheres nas áreas STEM envolve questões
+            de representação, oportunidades educacionais e desenvolvimento
+            científico.
+
+            Ampliar a diversidade nesses campos contribui para que
+            novas perspectivas e soluções inovadoras sejam integradas
+            aos desafios globais. Promover o acesso e a permanência
+            de mulheres na ciência beneficia toda a sociedade.
+
+        </p>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     RODAPÉ
+========================================================= -->
+
+<footer>
+
+    <p>
+        <strong>Vozes da Ciência</strong> &copy; Projeto de incentivo às mulheres nas áreas STEM.
+    </p>
+
+</footer>
+
+
+<!-- =========================================================
+     LÓGICA JAVASCRIPT
+========================================================= -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const scientistCards = document.querySelectorAll(".scientist-card");
+
+        filterButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const filterValue = button.getAttribute("data-filter");
+
+                // Atualiza estado visual dos botões e acessibilidade (aria-pressed)
+                filterButtons.forEach((btn) => {
+                    btn.classList.remove("active");
+                    btn.setAttribute("aria-pressed", "false");
+                });
+
+                button.classList.add("active");
+                button.setAttribute("aria-pressed", "true");
+
+                // Filtra os cards
+                scientistCards.forEach((card) => {
+                    const cardCategory = card.getAttribute("data-category");
+
+                    if (filterValue === "all" || filterValue === cardCategory) {
+                        card.removeAttribute("hidden");
+                    } else {
+                        card.setAttribute("hidden", "");
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
